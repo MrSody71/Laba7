@@ -5,11 +5,7 @@ db = sqlite3.connect("my.db")
 
 cur = db.cursor()
 
-cur.execute("""CREATE TABLE ФИО(
-    Фамилия text,
-    Имя text,
-    Отчество text
-)""")
+cur.execute("INSERT INTO ФИО VALUES ('Артюх', 'Виталий', 'Валеривеич')")
 
 db.commit()
 
